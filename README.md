@@ -23,7 +23,8 @@ A full-stack mental health tracking web app that helps users log moods, analyze 
 ---
 
 ## 📷 Preview
-(Add screenshots here)
+Screenshot 2026-05-01 051319.png
+Screenshot 2026-05-01 051357.png
 
 ---
 
