@@ -1,0 +1,149 @@
+body {
+    margin:0;
+    font-family: Arial;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+.bg {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c92d2);
+    background-size:400% 400%;
+    animation:move 10s infinite;
+    z-index:-2;
+}
+
+@keyframes move {
+    0%{background-position:0%}
+    100%{background-position:100%}
+}
+
+/* STARS */
+.stars {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size:30px 30px;
+    opacity:0.2;
+    z-index:-1;
+}
+
+/* HERO */
+.hero {
+    text-align:center;
+    padding:40px;
+}
+
+.title {
+    font-size:60px;
+    background:linear-gradient(90deg,#00c6ff,#ffcc00,#ff4d4d);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:glow 6s infinite;
+}
+
+@keyframes glow {
+    0%{background-position:0%}
+    100%{background-position:100%}
+}
+
+.subtitle {
+    opacity:0.8;
+}
+
+/* AUTH CARD */
+.auth-card {
+    width:320px;
+    margin:80px auto;
+    padding:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    text-align:center;
+}
+
+/* INPUT */
+.input-group {
+    position:relative;
+    margin:15px 0;
+}
+
+.input-group input {
+    width:100%;
+    padding:12px;
+    border-radius:12px;
+    border:none;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    outline:none;
+}
+
+.input-group input:focus {
+    box-shadow:0 0 15px #00c6ff;
+}
+
+/* BUTTONS */
+.btn-group {
+    display:flex;
+    gap:10px;
+}
+
+.btn {
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.primary {
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+}
+
+.secondary {
+    background:rgba(255,255,255,0.1);
+}
+
+/* APP */
+.grid {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.glass {
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    padding:20px;
+    border-radius:20px;
+    width:320px;
+}
+
+.big {
+    width:600px;
+}
+
+.hover:hover {
+    transform:translateY(-8px);
+}
+
+/* emoji */
+#emojiAnim {
+    font-size:45px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+/* responsive */
+@media(max-width:768px){
+    .big,.glass{width:90%;}
+}

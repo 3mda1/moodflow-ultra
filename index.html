@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MoodFlow Ultra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="stars"></div>
+
+<!-- SOUND -->
+<audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-09.mp3"></audio>
+
+<!-- HERO -->
+<div class="hero">
+    <h1 class="title">✨ MoodFlow Ultra</h1>
+    <p class="subtitle">Track • Analyze • Improve</p>
+</div>
+
+<!-- AUTH -->
+<div id="auth" class="auth-card">
+
+    <h1 class="brand">🧠 MoodFlow</h1>
+    <p class="sub">Welcome back 👋</p>
+
+    <div class="input-group">
+        <input id="username" placeholder="Username">
+        <span></span>
+    </div>
+
+    <div class="input-group">
+        <input id="password" type="password" placeholder="Password">
+        <span></span>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn primary" onclick="register()">Register</button>
+        <button class="btn secondary" onclick="login()">Login</button>
+    </div>
+
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+<div class="grid">
+
+    <div class="glass big hover">
+
+        <h2>📊 Dashboard</h2>
+
+        <div class="stats">
+            <div><h3 id="total">0</h3><p>Days</p></div>
+            <div><h3 id="avg">0</h3><p>Stress</p></div>
+            <div><h3 id="common">-</h3><p>Mood</p></div>
+        </div>
+
+        <canvas id="chart"></canvas>
+
+    </div>
+
+    <div class="glass hover">
+
+        <h2>😊 Mood</h2>
+
+        <div class="moods">
+            <button onclick="setMood('happy')">😄</button>
+            <button onclick="setMood('ok')">😐</button>
+            <button onclick="setMood('sad')">😢</button>
+        </div>
+
+        <div id="emojiAnim">😄</div>
+
+        <input id="stress" type="range" min="0" max="10" value="5">
+
+        <input id="note" placeholder="Write something...">
+
+        <button onclick="addMood()">Save</button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
